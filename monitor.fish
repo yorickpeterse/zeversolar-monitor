@@ -34,5 +34,5 @@ while true
         echo 'The inverter is offline'
     end
 
-    sleep 3600
+    sleep 1800
 end

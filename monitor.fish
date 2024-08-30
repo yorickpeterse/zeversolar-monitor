@@ -16,14 +16,13 @@ if ! test -n "$DB_PORT"
 end
 
 while true
-    set data (
+    set raw (
         curl --silent \
             --connect-timeout 5 \
             --max-time 5 \
-            "http://$INVERTER_IP/home.cgi"
+            "http://$INVERTER_IP/home.cgi" \
+        | tail -3 | head -1
     )
-
-    set raw (echo $data | tail -3 | head -1)
 
     if test -n $raw
         # The raw data is in Kilowatt/hour.

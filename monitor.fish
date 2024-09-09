@@ -29,6 +29,7 @@ while true
         set produced (math "$raw * 1000")
 
         echo "inverter produced=$produced" | ncat --udp $DB_IP $DB_PORT
+        echo "$produced Watts (raw: $raw kW)"
     else
         echo 'The inverter is offline'
     end

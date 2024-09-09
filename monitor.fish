@@ -24,7 +24,7 @@ while true
         | tail -3 | head -1
     )
 
-    if test -n $raw
+    if [ "$test" != "" ]
         # The raw data is in Kilowatt/hour.
         set produced (math "$raw * 1000")
 

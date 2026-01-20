@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora-minimal:40
+FROM registry.fedoraproject.org/fedora-minimal:43
 
 RUN microdnf --assumeyes --quiet install nmap-ncat fish curl
 ADD monitor.fish /monitor.fish
